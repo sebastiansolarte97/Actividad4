@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <main>
+    
+        <h1 v-if="conectado = true">Estas conectado</h1>
+
+        <h2 v-if="llamados_aten = true">El estudiante presenta llamados de atención</h2>
+        
+        
+         <h2 v-else>No presentas llamados de atención.</h2>
+
+        <template v-if="conectado">
+            <h3>Bienvenid@ Aurora María Humanez Rangel</h3>
+            <ul>
+                <li>
+                    <a href="#">Ver llamados de atención del estudiante</a>
+                    <a href="#">Estado acádemico</a>
+                    <a href="#">Mi perfil</a>
+                    <a href="#">Mensajes</a>
+                    <a href="#">Cerrar sessión</a>
+                </li>
+            </ul>
+        </template>
+        <h4 v-else>Lo sentimos, no estás conectado.</h4>
+        <pre>{{ $data }}</pre>
+    </main>
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
